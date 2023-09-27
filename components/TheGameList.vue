@@ -54,7 +54,7 @@ const filteredGames = computed(() => {
   if (!gamesData.value || !gamesData.value.games) {
     return [];
   }
-  if (!props.searchValue || props.searchValue === '') {
+  if (!props.searchValue || props.searchValue.trim() === '') {
     return gamesData.value.games;
   } else {
     const searchValueLowerCase = props.searchValue.toLowerCase();
